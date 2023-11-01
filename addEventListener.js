@@ -8,7 +8,14 @@ let coordinateButton = document.querySelector(".coordinate-button");
 function getCoordinates(event) {
     console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
 }
+consoleButton.eventListener("click" ,function() {
+  alert("Button has been clicked!");
+  console.log("Button has been clicked!");
+})
 
+alertButton.addEventListener('click', function() {
+  alert('hello!');
+});
 // 1. Add the event listener for consoleButton.
 //  - Select the variable.
 //  - Add the .addEventLister method.
@@ -33,4 +40,6 @@ function getCoordinates(event) {
 //  - There's already a function defined above that we can use!
 //  - All you need to do is use the function name.
 //  - Check out the first example here if you get stuck: https://www.w3schools.com/jsref/met_document_addeventlistener.asp 
-
+coordinateButton.addEventListener('click',function() {
+  getCoordinates(event);
+});
